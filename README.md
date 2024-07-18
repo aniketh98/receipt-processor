@@ -34,8 +34,7 @@ The Receipt Processor service provides two main endpoints:
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
-   cd receipt-processor
+   git clone https://github.com/aniketh98/receipt-processor.git
    ```
 
 2. Install the dependencies:
