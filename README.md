@@ -37,7 +37,7 @@ The Receipt Processor service provides two main endpoints:
    git clone https://github.com/aniketh98/receipt-processor.git
    ```
 
-2. Install the dependencies:
+2. Extract the files & Install the dependencies:
 
    ```bash
    npm install
