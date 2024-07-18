@@ -15,7 +15,6 @@ This project implements a web service that processes receipts and calculates poi
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
-- [License](#license)
 
 ## Overview
 
@@ -35,13 +34,16 @@ The Receipt Processor service provides two main endpoints:
 
 1. Clone the repository:
 
-   git clone https://github.com/aniketh98/receipt-processor.git
+   ```bash
+   git clone <repository_url>
    cd receipt-processor
+   ```
 
 2. Install the dependencies:
 
+   ```bash
    npm install
-   
+   ```
 
 ## Running the Application
 
@@ -49,15 +51,19 @@ The Receipt Processor service provides two main endpoints:
 
 1. Ensure Docker is installed on your system.
 2. Build the Docker image:
+
+   ```bash
    docker build -t receipt-processor .
+   ```
 
 3. Run the Docker container:
+
+   ```bash
    docker run -p 3000:3000 receipt-processor
+   ```
 
-4. open your command prompt window and type below command to test the API:
+4. The application will be available at `http://localhost:3000`.
 
-   testing the process API:
-   curl -X POST -H "Content-Type: application/json" -d @receipt.json http://localhost:3000/receipts/process
 ### Without Docker
 
 1. Ensure Node.js is installed on your system.
@@ -87,6 +93,9 @@ The Receipt Processor service provides two main endpoints:
 
 #### Example Request
 
+API's can be tested in 3 ways:
+1. using command line by including payload in command:
+
 ```bash
 curl -X POST http://localhost:3000/receipts/process -H "Content-Type: application/json" -d '{
   "retailer": "Target",
@@ -106,11 +115,20 @@ curl -X POST http://localhost:3000/receipts/process -H "Content-Type: applicatio
 }'
 ```
 
+2. using command line (by including payload in receipt.json file in the current project folder) then type the below command:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d @receipt.json http://localhost:3000/receipts/process
+
+3. using postman.
+
 #### Example Response
 
+```json
 {
   "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
 }
+```
 
 ### Get Points
 
@@ -119,7 +137,10 @@ curl -X POST http://localhost:3000/receipts/process -H "Content-Type: applicatio
 - **Response:** JSON containing the number of points awarded.
 
 #### Example Request
+
+```bash
 curl http://localhost:3000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
+```
 
 #### Example Response
 
@@ -127,16 +148,23 @@ curl http://localhost:3000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
 {
   "points": 32
 }
+```
 
 ## Testing
 
 To run tests for the application, use the following commands:
 
 1. To run all tests:
+
+   ```bash
    npm test
+   ```
 
 2. To run tests in watch mode:
+
+   ```bash
    npm run test:watch
+   ```
 
 ## Project Structure
 
