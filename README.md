@@ -13,7 +13,6 @@ This project implements a web service that processes receipts and calculates poi
   - [Process Receipts](#process-receipts)
   - [Get Points](#get-points)
 - [Testing](#testing)
-- [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
 
 ## Overview
@@ -165,25 +164,6 @@ To run tests for the application, use the following commands:
    ```bash
    npm run test:watch
    ```
-
-## Project Structure
-
-```plaintext
-receipt-processor/
-├── src/
-│   ├── app.ts
-│   └── calculatePoints.ts
-├── tests/
-│   └── app.test.ts
-├── .dockerignore
-├── .gitignore
-├── Dockerfile
-├── jest.config.js
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-└── README.md
-```
 
 ## Dependencies
 
