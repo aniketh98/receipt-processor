@@ -119,7 +119,7 @@ curl -X POST http://localhost:3000/receipts/process -H "Content-Type: applicatio
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d @receipt.json http://localhost:3000/receipts/process
-
+```
 3. using postman.
 
 #### Example Response
